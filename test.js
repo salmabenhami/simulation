@@ -13,7 +13,7 @@ var testCases = [
     var a = parseFloat(note);
     var result;
     
-    if (a >= 10 && a < 12) {
+    if (a > 10 && a < 12) {
       result = "la mention est passable";
     } else if (a >= 12 && a < 14) {
       result = "la mention est assez bien";
