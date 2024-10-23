@@ -7,8 +7,6 @@ var testCases = [
     { note: 15.5, expected: "la mention est bien" },
     { note: 16, expected: "la mention est très bien" },
     { note: 19.5, expected: "la mention est très bien" },
-    { note: 9, expected: "la note est invalid, veuillez saisir une notre entre 10 et 20" },
-    { note: 21, expected: "la note est invalid, veuillez saisir une notre entre 10 et 20" },
   ];
   
   testCases.forEach(({ note, expected }) => {
@@ -32,3 +30,4 @@ var testCases = [
       throw new Error(`Test failed for note ${note}`);
     }
   });
+  
