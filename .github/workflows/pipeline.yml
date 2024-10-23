@@ -38,6 +38,22 @@ jobs:
         run: |
           echo "Running unit tests..."
           node test.js  
+  int-test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # Utilisation de Node.js 20
+
+      - name: Run unit tests
+        run: |
+          echo "Running unit tests..."
+          node test.js  
 
   # Étape de déploiement
   deploy:
